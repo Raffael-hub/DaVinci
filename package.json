@@ -1,0 +1,29 @@
+{
+  "name": "davinci",
+  "version": "1.0.0",
+  "description": "pap",
+  "main": "app.js",
+  "dependencies": {
+    "angular-chart.js": "^1.1.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "less": "^3.11.1",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "pretty-checkbox": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raffael-hub/DaVinci.git"
+  },
+  "author": "Perrutte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raffael-hub/DaVinci/issues"
+  },
+  "homepage": "https://github.com/Raffael-hub/DaVinci#readme"
+}
