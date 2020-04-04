@@ -1,0 +1,252 @@
+<style>
+body{
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+    font-family: 'ABeeZee', sans-serif;
+    background-image:url("https://i.imgur.com/WXVQymk.jpg");
+   
+    
+    
+}
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.box-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 15px;
+  width: 100%;
+
+  
+  
+}
+
+@media screen and (min-width:1380px) {
+  .box-container {
+    flex-direction: row
+    
+  }
+}
+
+.box-item {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  width: 415px;
+  margin-bottom: 35px;
+  max-width: 100%;
+  padding-right: 15px;
+  float:left;
+ margin-right:20px;
+  
+  
+ 
+}
+
+.flip-box {
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  
+}
+
+.flip-box-front,
+.flip-box-back {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  min-height: 475px;
+  -ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+}
+
+.flip-box-front {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-box:hover .flip-box-front {
+    
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+  
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-back {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-box .inner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 60px;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+  
+  
+  transform: translateY(-50%) translateZ(60px) scale(.94);
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
+  -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
+  top: 50%;
+}
+
+.flip-box-header {
+  font-size: 45px;
+  text-shadow: 2px 2px black;
+  
+}
+
+.flip-box p {
+  font-size: 20px;
+  line-height: 1.5em;
+  
+}
+
+.flip-box-img {
+  margin-top: 25px;
+  
+}
+
+.flip-box-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+}
+
+
+</style>
+
+<center>
+
+<br>
+<br>
+  <br>
+  <br><br>
+  <br>
+  <br><br>
+  <br>
+  <br>
+    <br><br><br>
+    <div class="box-container">
+        <div class="box-item">
+        <div class="flip-box">
+          <div class="flip-box-front text-center" style=" background-image: url('https://i.imgur.com/dyJmM6x.jpg'); ">
+            <div class="inner color-white">
+              <h3 class="flip-box-header">Escolas</h3>
+              <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">
+            </div>
+          </div>
+          <div class="flip-box-back text-center" style="background-image: url('https://i.imgur.com/0jWjQGV.jpg');">
+            <div class="inner color-white">
+              <h3 class="flip-box-header">Escolas</h3>
+              <p>Vem conhecer e escolher a tua futura escola</p>
+              <button class="flip-box-button" ui-sref="escolas">Ver</button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+        <div class="box-item">
+        <div class="flip-box">
+          <div class="flip-box-front text-center" style="background-image: url('https://i.imgur.com/aKJeNS8.jpg');">
+            <div class="inner color-white">
+              <h3 class="flip-box-header">Cursos</h3>
+              <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">
+            </div>
+          </div>
+          <div class="flip-box-back text-center" style="background-image: url('https://i.imgur.com/VKI7s80.jpg');">
+            <div class="inner color-white">
+              <h3 class="flip-box-header">Cursos</h3>
+              <p>Ajuda-nos a encontrar o curso ideal para ti</p>
+              <button class="flip-box-button" ui-sref="cursos">Ir</button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+
+
+        <div class="box-item">
+        <div class="flip-box">
+          <div class="flip-box-front text-center filter-" style="background-image: url('https://i.imgur.com/dJDLaHr.jpg');">
+            <div class="inner color-white">
+              <h3 class="flip-box-header">Sobre Nós</h3>
+              <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img">
+            </div>
+          </div>
+          <div class="flip-box-back text-center" style="background-image: url('https://i.imgur.com/VmjlkaZ.jpg');">
+            <div class="inner color-white">
+              <h3 class="flip-box-header">Sobre Nós</h3>
+              <p>Vem conhecer-nos</p>
+              <button class="flip-box-button" ui-sref="sobre">Saber mais</button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      
+    
+</center>

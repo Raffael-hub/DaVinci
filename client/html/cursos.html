@@ -1,0 +1,317 @@
+<style>
+body{
+  background-image: url("https://i.imgur.com/epRyW5t.jpg");
+  font-family: 'ABeeZee', sans-serif;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  
+  
+  
+}
+ul {
+  list-style-type: none;
+  width: 2200px;
+}
+
+
+li{
+    margin-left:30px;
+    margin-right: 50px;
+    display:inline-block;
+    
+}
+img{
+    height:90px;
+    width:90px;
+    border-radius: 20%;
+    border: 4px solid #000;
+}
+
+#k{
+    width: auto;
+    height:auto;
+    background-color: cornsilk;
+    border-radius: 5px;
+    margin-top: -90px;
+    
+}
+
+#k3{
+    width: 100%;
+    height:400px;
+    background-color: cornsilk;
+    border-radius: 5px;
+    
+}
+
+label {
+ 
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+  margin-left: 70px;
+}
+
+label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: forestgreen;
+  transform: scale(1);
+
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
+
+#fs2{
+    width: 700px;
+    height:400px;
+    background-color: cornsilk;
+    border-radius: 5px;
+    margin-top:200px;
+}
+
+#fs3{
+    width: 700px;
+    height:400px;
+    background-color: cornsilk;
+    border-radius: 5px;
+    margin-top:200px;
+}
+
+#fs4{
+    width: 100%;
+    height:600px;
+    background-color: cornsilk;
+    border-radius: 5px;
+    margin-top:100px;
+}
+
+#logo{
+  width: auto;
+  height: auto;
+  border: 0;
+  text-align: center;
+  display:block;
+  
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+a.fill-div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+</style>
+
+
+
+  
+
+<!-- <button id="begin" type="button" ng-click="begin()" ng-show="ola" class="btn btn-danger">Começar</button>-->
+<div id="myDiv" style="height:270px; width:270px;  margin-left: 80px; margin-top: 10px;">
+  <a ui-sref="home" class="fill-div"></a>
+</div>
+<br>
+<br>
+<br>
+
+
+
+
+<center>
+  
+   <h1 ng-hide="esconde_h1" style="font-size: 50px;  text-shadow: 1px 1px black;"><b>Escolhe 3 áreas que tenhas interesse</b></h1>
+<div ng-hide="divP">
+<div id="k">
+    <br><br>
+ 
+    
+  <ul>
+    
+      <li ng-repeat="x in categorias" style="margin-bottom: 50px;">
+          <style> 
+          
+          input[type="checkbox"][id^="img-"]{
+              display: none;
+          }
+          </style>
+          <input type="checkbox" ng-attr-id="{{'img-' + x.id}}" value="{{x.id}}" ng-click="clicado(x)" ng-disabled="IsDisabled2" >
+          <label for="{{'img-' + x.id}}"><img ng-src="{{x.imagem}}"></label>
+          <br>
+          
+          <h6><strong>{{x.nome}}</strong></h6>
+          
+       
+      </li>
+
+   
+  </ul>
+  <button ng-click="continuar(categoriasFinais)" ng-disabled="IsDisabled">Continuar</button>
+  
+</div>
+
+
+
+
+
+</div>
+
+</div>
+<div style="background-image: url(https://i.imgur.com/eH4IDUl.jpg); height:200px; width:100%;">
+  
+</div>
+
+
+<div ng-hide="fase2" id="k" ng-show="mostra">
+    <!-- <ul ng-repeat="k in novas_categorias">
+        <li style="color:cornsilk" > {{k.nome}}</li>
+        <li style="color:cornsilk">{{k.pergunta}}</li>
+    </ul> -->
+
+    <h3>{{novas_categorias[nr].pergunta}}</h3>
+    
+    <br><br>
+    <div id="kkk" ng-show="mostra2">
+    <input type="radio" name="gender" ng-model="SELECTED" ng-value="novas_categorias[nr]" ng-show="mostra2" ng-click="SNclick('sim')">  Sim<br>
+    <br>
+    <input type="radio" name="gender" ng-model="SELECTED2" ng-value="novas_categorias[nr]" ng-show="mostra2" ng-click="SNclick('nao')"> Não<br>
+  </div>  
+    <br>
+      <h5><b>{{mensagem}}</b></h5>
+      <br>
+      <button ng-click="seguinte2()" ng-disabled="IsDisabled4">Seguinte</button>
+</div>
+
+
+
+
+<!-- <div>
+MOSTRAR TAGS DE CURSOS PARA O UTILIZADOR ESCOLHER 
+
+</div> -->
+
+<div ng-hide="esconde4">
+  <div id="k">
+  <ul>
+    
+    <li ng-repeat="v in curso5">
+        <style>
+        
+        input[type="checkbox"][id^="img-"], input[type=radio]{
+            
+        }
+        
+        </style>
+        <input type="checkbox" ng-attr-id="{{'imgv-' + v.id}}" value="{{v.id}}" ng-click="clicado2(v.tag)" style="display: none;">
+        <label for="{{'imgv-' + v.id}}"><img ng-src="{{v.imagem}}"></label>
+        <br>
+        
+        <h6><strong>{{v.tag}}</strong></h6>
+        
+     
+    </li>
+    </ul>
+    <button ng-click="siga()" ng-disabled="IsDisabled3">Continuar</button>
+  </div>
+ 
+<br>
+
+</div>
+
+
+
+<div  id="k" ng-hide="esconde5">
+
+
+  <h3>{{mostra7[nrk].pergunta}}</h3>
+  
+  <br><br>
+  <div id="kkk" ng-show="mostra9">
+  <input type="radio" name="gender"  ng-model="SELECTED3" ng-value="mostra7[nrk]" ng-show="mostra9"  ng-click="SNclick2('sim')" checked>Sim<br>
+  <br>
+  <input type="radio" name="gender"  ng-model="SELECTED4" ng-value="mostra7[nrk]" ng-show="mostra9" ng-click="SNclick2('nao')">Não <br>
+
+</div>  
+  <br>
+    <br>
+    <button ng-click="seguinte3()" ng-disabled="IsDisabled5">Seguinte</button>
+</div>
+
+
+
+<div id="k" ng-hide="esconde10">
+<center><h2><b>Cursos que poderás gostar:</b></h1></center>
+<!-- <ul ng-repeat="p in final5">
+  <li >{{p.nome}}</li>
+  <br>
+  <li><a href="#" ng-click="IrEscolas(p)">Ir Para Escola</a></li>
+</ul> -->
+ 
+
+<table style="width:100%" ng-repeat="p in final5" >
+
+  <tr>
+    <th><h3><b>Curso</b></h3></th>
+    <br>
+  </tr>
+  <tr>
+    <td><h5>{{p.nome}}</h5></td>
+    <br>
+  </tr>
+  <tr>
+    <td><a style="font-size: 20px;" href="#" ng-click="IrEscolas(p)">Ir Para Escolas</a></li></td>
+    
+  </tr>
+ 
+</table>
+
+</div>
+
+</div>
+</center>
+
+
+   
+  

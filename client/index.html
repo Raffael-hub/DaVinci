@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mean Test</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <scipt src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></scipt>
+  <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+  
+     <script src="js/lib/angular-ui-router.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/routing.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+
+    <style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  margin-top:35px;
+  text-align: center;
+
+  
+}
+
+li {
+  margin-left: 30px;
+    margin-right: 50px;
+    display: flow-root;
+    float: left;
+    width: 310px;
+    margin-left: 20px;
+}
+    li a {
+  display: block;
+  color:black;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size:28px;
+  font-family: 'ABeeZee', sans-serif;
+  color :#41596b;
+}
+
+
+
+li a:hover {
+  color :#41596b;
+  text-decoration: none;
+}
+
+body{
+  background-color: #fff;
+  
+}
+
+
+       
+    </style>
+
+</head>
+<body>
+
+  
+
+  
+  <!-- 
+      <center>
+        <div style="display: flex;
+        justify-content: center;">
+      <ul>
+       
+        <li><a ui-sref="home" style="font-family: 'ABeeZee', sans-serif; font-size: 50px;"><img src="https://i.imgur.com/tQBH3Oj.png" id="logo"></a></li>
+        
+        
+      </ul>
+    </div>
+    </center> -->
+    <br>
+    
+    <div id="content" ui-view="container">
+    
+    </div>
+</body>
+</html>
